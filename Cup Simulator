@@ -1,0 +1,886 @@
+import java.util.*;
+
+public class Simulation{
+
+  public static void main(String[] args){
+    
+    Scanner input = new Scanner(System.in);
+    
+    System.out.println(
+                   "      -------------------------\n"
+    		         + "      | Stanley Cup Simulator |\n"
+    		         + "      |      Sean  Parker     |\n"
+    		         + "      |         2016          |\n"
+    		         + "      -------------------------\n\n"       
+    		+ "Would you like to run one simulation or up to 100?\n"
+    		+ "(1) One Simulation\n"
+    		+ "(2) More than one\n"
+    		+ "(3) Exit");
+    int simOption = input.nextInt();
+    
+    switch(simOption){
+    	case 1:
+    		sim(args);
+    		break;
+    		
+    	case 2:
+    		multiSim(args);
+    		break;
+    		
+    	case 3:
+    		System.out.println("Thanks for playing!");
+    		break;
+    		
+    	default:
+    		System.out.println("Please select either 1, 2, or 3!\n\n");
+    		main(args);
+    		break;
+    	}
+ 
+    }   
+  
+  public static void sim(String[] args){
+	  
+	  Scanner input = new Scanner(System.in);
+	  
+	  int cupWinner = (int) Math.ceil(Math.random()*118);
+	  String cupTeam = null;
+	    
+	    
+	    if(1 <= cupWinner && cupWinner <= 5){
+	        cupWinner = 1;
+	    }
+	    
+	    else if(6 <= cupWinner && cupWinner <= 7){
+	    	cupWinner = 2;
+	    }
+	    
+	    else if(7 <= cupWinner && cupWinner <= 7){
+	    	cupWinner = 3;
+	    }
+	    
+	    else if(8 <= cupWinner && cupWinner <= 8){
+	    	cupWinner = 4;
+	    }
+	    
+	    else if(9 <= cupWinner && cupWinner <= 9){
+	    	cupWinner = 5;
+	    }
+	    
+	    else if(10 <= cupWinner && cupWinner <= 19){
+	    	cupWinner = 6;
+	    }
+	    
+	    else if(20 <= cupWinner && cupWinner <= 20){
+	    	cupWinner = 7;
+	    }
+	    
+	    else if(21 <= cupWinner && cupWinner <= 27){
+	    	cupWinner = 8;
+	    }
+	    
+	    else if(28 <= cupWinner && cupWinner <= 28){
+	    	cupWinner = 9;
+	    }
+	    
+	    else if(29 <= cupWinner && cupWinner <= 29){
+	    	cupWinner = 10;
+	    }
+	    
+	    else if(30 <= cupWinner && cupWinner <= 34){
+	    	cupWinner = 11;
+	    }
+	    
+	    else if(35 <= cupWinner && cupWinner <= 36){
+	    	cupWinner = 12;
+	    }
+	    
+	    else if(37 <= cupWinner && cupWinner <= 37){
+	    	cupWinner = 13;
+	    }
+	    
+	    else if(38 <= cupWinner && cupWinner <= 45){
+	    	cupWinner = 14;
+	    }
+	    
+	    else if(46 <= cupWinner && cupWinner <= 58){
+	    	cupWinner = 15;
+	    }
+	    
+	    else if(59 <= cupWinner && cupWinner <= 62){
+	    	cupWinner = 16;
+	    }
+	    
+	    else if(63 <= cupWinner && cupWinner <= 66){
+	    	cupWinner = 17;
+	    }
+	    
+	    else if(67 <= cupWinner && cupWinner <= 67){
+	    	cupWinner = 18;
+	    }
+	    
+	    else if(68 <= cupWinner && cupWinner <= 87){
+	    	cupWinner = 19;
+	    }
+	    
+	    else if(88 <= cupWinner && cupWinner <= 89){
+	    	cupWinner = 20;
+	    }
+	    
+	    else if(90 <= cupWinner && cupWinner <= 90){
+	    	cupWinner = 21;
+	    }
+	    
+	    else if(91 <= cupWinner && cupWinner <= 91){
+	    	cupWinner = 22;
+	    }
+	    
+	    else if(92 <= cupWinner && cupWinner <= 96){
+	    	cupWinner = 23;
+	    }
+	    
+	    else if(97 <= cupWinner && cupWinner <= 97){
+	    	cupWinner = 24;
+	    }
+	    
+	    else if(98 <= cupWinner && cupWinner <= 102){
+	    	cupWinner = 25;
+	    }
+	    
+	    else if(103 <= cupWinner && cupWinner <= 107){
+	    	cupWinner = 26;
+	    }
+	    
+	    else if(108 <= cupWinner && cupWinner <= 109){
+	    	cupWinner = 27;
+	    }
+	    
+	    else if(110 <= cupWinner && cupWinner <= 110){
+	    	cupWinner = 28;
+	    }
+	    
+	    else if(111 <= cupWinner && cupWinner <= 114){
+	    	cupWinner = 29;
+	    }
+	    
+	    else if(115 <= cupWinner && cupWinner <= 118){
+	    	cupWinner = 30;
+	    }
+	    	
+	    switch (cupWinner){
+	    case 1:
+	    	cupTeam = "Anaheim Ducks";
+	        break;
+	    case 2:
+	        cupTeam = "Boston Bruins";
+	        break;
+	        
+	      case 3:
+	        cupTeam = "Buffalo Sabres";
+	        break;
+	        
+	      case 4:
+	        cupTeam = "Calgary Flames";
+	        break;
+	        
+	      case 5:
+	        cupTeam = "Carolina Hurricanes";
+	        break;
+	        
+	      case 6:
+	        cupTeam = "Chicago Blackhawks";
+	        break;
+	        
+	      case 7:
+	        cupTeam = "Colorado Avalanche";
+	        break;
+	        
+	      case 8:
+	        cupTeam = "Columbus Blue Jackets";
+	        break;
+	        
+	      case 9:
+	        cupTeam = "Dallas Stars";
+	        break;
+	        
+	      case 10:
+	        cupTeam = "Detroit Red Wings";
+	        break;
+	        
+	      case 11:
+	        cupTeam = "Edmonton Oilers";
+	        break;
+	        
+	      case 12:
+	        cupTeam = "Florida Panthers";
+	        break;
+	        
+	      case 13:
+	        cupTeam = "Los Angeles Kings";
+	        break;
+	        
+	      case 14:
+	        cupTeam = "Minnesota Wild";
+	        break;
+	        
+	      case 15:
+	        cupTeam = "Montreal Canadiens";
+	        break;
+	        
+	        case 16:
+	        cupTeam = "Nashville Predators";
+	        break;
+	        
+	        case 17:
+	        cupTeam = "New Jersey Devils";
+	        break;
+	        
+	        case 18:
+	        cupTeam = "New York Islanders";
+	        break;
+	        
+	        case 19:
+	        cupTeam = "New York Rangers";
+	        break;
+	        
+	        case 20:
+	        cupTeam = "Ottawa Senators";
+	        break;
+	        
+	        case 21:
+	        cupTeam = "Philadelphia Flyers";
+	        break;
+	        
+	        case 22:
+	        cupTeam = "Arizona Coyotes";
+	        break;
+	        
+	        case 23:
+	        cupTeam = "Pittsburgh Penguins";
+	        break;
+	        
+	        case 24:
+	        cupTeam = "St. Louis Blues";
+	        break;
+	        
+	        case 25:
+	        cupTeam = "San Jose Sharks";
+	        break;
+	        
+	        case 26:
+	        cupTeam = "Tampa Bay Lightning";
+	        break;
+	        
+	        case 27:
+	        cupTeam = "Toronto Maple Leafs";
+	        break;
+	        
+	        case 28:
+	        cupTeam = "Vancouver Canucks";
+	        break;
+	        
+	        case 29:
+	        cupTeam = "Washington Capitals";
+	        break;
+	        
+	        case 30:
+	        cupTeam = "Winnipeg Jets";
+	        break;     
+	      }
+	    System.out.print(".");
+	    try {
+	        Thread.sleep(500);
+	    } catch(InterruptedException ex) {
+	        Thread.currentThread().interrupt();
+	    }
+	    System.out.print(".");
+	    try {
+	        Thread.sleep(500);
+	    } catch(InterruptedException ex) {
+	        Thread.currentThread().interrupt();
+	    }
+	    System.out.print(".\n");
+	    try {
+	        Thread.sleep(500);
+	    } catch(InterruptedException ex) {
+	        Thread.currentThread().interrupt();
+	    }
+	    
+	    System.out.println("The " + cupTeam + " have won the Stanley Cup!\n"
+	    		+ "\n(1) Simulate again\n"
+	    		+ "(2) Menu\n"
+	    		+ "(3) Exit\n");
+	    int menu2 = input.nextInt();
+	    
+	    switch(menu2){
+	    
+	    case 1:
+	    	sim(args);
+	    	break;
+	    	
+	    case 2:
+	    	main(args);
+	    	break;
+	    
+	    case 3:
+	    	System.out.println("Thanks for playing!");
+	    	break;
+	    	
+	    default:
+	    	System.out.println("Please select 1, 2, or 3!\n");
+	    	main(args);
+	    }
+	    
+  }
+ 
+  public static void multiSim(String[] args){
+	  
+	  Scanner input = new Scanner(System.in);
+	  
+	  String cupTeam = null;
+	  
+	  System.out.println("How many times would you like to run the simulation (0-100)?");
+	  int simRuns = input.nextInt();
+	  
+	  System.out.print(".");
+	    try {
+	        Thread.sleep(500);
+	    } catch(InterruptedException ex) {
+	        Thread.currentThread().interrupt();
+	    }
+	    System.out.print(".");
+	    try {
+	        Thread.sleep(500);
+	    } catch(InterruptedException ex) {
+	        Thread.currentThread().interrupt();
+	    }
+	    System.out.print(".\n");
+	    try {
+	        Thread.sleep(500);
+	    } catch(InterruptedException ex) {
+	        Thread.currentThread().interrupt();
+	    }
+	    
+	  
+      int ducks = 0,bruins = 0,sabres = 0,flames = 0,hurricanes = 0,blackhawks = 0,avalanche = 0,blueJackets = 0,stars = 0,redWings = 0,oilers = 0,panthers = 0,kings = 0,wild = 0,canadiens = 0,predators = 0,devils = 0,islanders = 0,rangers = 0,senators = 0,flyers = 0,coyotes = 0,penguins = 0,blues = 0,sharks = 0,lightning = 0,mapleLeafs = 0,canucks = 0,capitals = 0,jets = 0;
+	  
+      if (simRuns <= 100 && simRuns > 0){
+	  for(int i = 0; i < simRuns; i++){
+		  
+		int cupWinner = (int) Math.ceil(Math.random()*118);  
+	  
+	    if(1 <= cupWinner && cupWinner <= 5){
+	        cupWinner = 1;
+	    }
+	    
+	    else if(6 <= cupWinner && cupWinner <= 7){
+	    	cupWinner = 2;
+	    }
+	    
+	    else if(7 <= cupWinner && cupWinner <= 7){
+	    	cupWinner = 3;
+	    }
+	    
+	    else if(8 <= cupWinner && cupWinner <= 8){
+	    	cupWinner = 4;
+	    }
+	    
+	    else if(9 <= cupWinner && cupWinner <= 9){
+	    	cupWinner = 5;
+	    }
+	    
+	    else if(10 <= cupWinner && cupWinner <= 19){
+	    	cupWinner = 6;
+	    }
+	    
+	    else if(20 <= cupWinner && cupWinner <= 20){
+	    	cupWinner = 7;
+	    }
+	    
+	    else if(21 <= cupWinner && cupWinner <= 27){
+	    	cupWinner = 8;
+	    }
+	    
+	    else if(28 <= cupWinner && cupWinner <= 28){
+	    	cupWinner = 9;
+	    }
+	    
+	    else if(29 <= cupWinner && cupWinner <= 29){
+	    	cupWinner = 10;
+	    }
+	    
+	    else if(30 <= cupWinner && cupWinner <= 34){
+	    	cupWinner = 11;
+	    }
+	    
+	    else if(35 <= cupWinner && cupWinner <= 36){
+	    	cupWinner = 12;
+	    }
+	    
+	    else if(37 <= cupWinner && cupWinner <= 37){
+	    	cupWinner = 13;
+	    }
+	    
+	    else if(38 <= cupWinner && cupWinner <= 45){
+	    	cupWinner = 14;
+	    }
+	    
+	    else if(46 <= cupWinner && cupWinner <= 58){
+	    	cupWinner = 15;
+	    }
+	    
+	    else if(59 <= cupWinner && cupWinner <= 62){
+	    	cupWinner = 16;
+	    }
+	    
+	    else if(63 <= cupWinner && cupWinner <= 66){
+	    	cupWinner = 17;
+	    }
+	    
+	    else if(67 <= cupWinner && cupWinner <= 67){
+	    	cupWinner = 18;
+	    }
+	    
+	    else if(68 <= cupWinner && cupWinner <= 87){
+	    	cupWinner = 19;
+	    }
+	    
+	    else if(88 <= cupWinner && cupWinner <= 89){
+	    	cupWinner = 20;
+	    }
+	    
+	    else if(90 <= cupWinner && cupWinner <= 90){
+	    	cupWinner = 21;
+	    }
+	    
+	    else if(91 <= cupWinner && cupWinner <= 91){
+	    	cupWinner = 22;
+	    }
+	    
+	    else if(92 <= cupWinner && cupWinner <= 96){
+	    	cupWinner = 23;
+	    }
+	    
+	    else if(97 <= cupWinner && cupWinner <= 97){
+	    	cupWinner = 24;
+	    }
+	    
+	    else if(98 <= cupWinner && cupWinner <= 102){
+	    	cupWinner = 25;
+	    }
+	    
+	    else if(103 <= cupWinner && cupWinner <= 107){
+	    	cupWinner = 26;
+	    }
+	    
+	    else if(108 <= cupWinner && cupWinner <= 109){
+	    	cupWinner = 27;
+	    }
+	    
+	    else if(110 <= cupWinner && cupWinner <= 110){
+	    	cupWinner = 28;
+	    }
+	    
+	    else if(111 <= cupWinner && cupWinner <= 114){
+	    	cupWinner = 29;
+	    }
+	    
+	    else if(115 <= cupWinner && cupWinner <= 118){
+	    	cupWinner = 30;
+	    }
+	    	
+	    switch (cupWinner){
+	    case 1:
+	    	cupTeam = "Anaheim Ducks";
+	    	ducks++;
+	        break;
+	    case 2:
+	        cupTeam = "Boston Bruins";
+	        bruins++;
+	        break;
+	        
+	      case 3:
+	        cupTeam = "Buffalo Sabres";
+	        sabres++;
+	        break;
+	        
+	      case 4:
+	        cupTeam = "Calgary Flames";
+	        flames++;
+	        break;
+	        
+	      case 5:
+	        cupTeam = "Carolina Hurricanes";
+	        hurricanes++;
+	        break;
+	        
+	      case 6:
+	        cupTeam = "Chicago Blackhawks";
+	        blackhawks++;
+	        break;
+	        
+	      case 7:
+	        cupTeam = "Colorado Avalanche";
+	        avalanche++;
+	        break;
+	        
+	      case 8:
+	        cupTeam = "Columbus Blue Jackets";
+	        blueJackets++;
+	        break;
+	        
+	      case 9:
+	        cupTeam = "Dallas Stars";
+	        stars++;
+	        break;
+	        
+	      case 10:
+	        cupTeam = "Detroit Red Wings";
+	        redWings++;
+	        break;
+	        
+	      case 11:
+	        cupTeam = "Edmonton Oilers";
+	        oilers++;
+	        break;
+	        
+	      case 12:
+	        cupTeam = "Florida Panthers";
+	        panthers++;
+	        break;
+	        
+	      case 13:
+	        cupTeam = "Los Angeles Kings";
+	        kings++;
+	        break;
+	        
+	      case 14:
+	        cupTeam = "Minnesota Wild";
+	        wild++;
+	        break;
+	        
+	      case 15:
+	        cupTeam = "Montreal Canadiens";
+	        canadiens++;
+	        break;
+	        
+	        case 16:
+	        cupTeam = "Nashville Predators";
+	        predators++;
+	        break;
+	        
+	        case 17:
+	        cupTeam = "New Jersey Devils";
+	        devils++;
+	        break;
+	        
+	        case 18:
+	        cupTeam = "New York Islanders";
+	        islanders++;
+	        break;
+	        
+	        case 19:
+	        cupTeam = "New York Rangers";
+	        rangers++;
+	        break;
+	        
+	        case 20:
+	        cupTeam = "Ottawa Senators";
+	        senators++;
+	        break;
+	        
+	        case 21:
+	        cupTeam = "Philadelphia Flyers";
+	        flyers++;
+	        break;
+	        
+	        case 22:
+	        cupTeam = "Arizona Coyotes";
+	        coyotes++;
+	        break;
+	        
+	        case 23:
+	        cupTeam = "Pittsburgh Penguins";
+	        penguins++;
+	        break;
+	        
+	        case 24:
+	        cupTeam = "St. Louis Blues";
+	        blues++;
+	        break;
+	        
+	        case 25:
+	        cupTeam = "San Jose Sharks";
+	        sharks++;
+	        break;
+	        
+	        case 26:
+	        cupTeam = "Tampa Bay Lightning";
+	        lightning++;
+	        break;
+	        
+	        case 27:
+	        cupTeam = "Toronto Maple Leafs";
+	        mapleLeafs++;
+	        break;
+	        
+	        case 28:
+	        cupTeam = "Vancouver Canucks";
+	        canucks++;
+	        break;
+	        
+	        case 29:
+	        cupTeam = "Washington Capitals";
+	        capitals++;
+	        break;
+	        
+	        case 30:
+	        cupTeam = "Winnipeg Jets";
+	        jets++;
+	        break;     
+	      }
+	  }
+	  
+	  int winnerName = 0;
+	  
+	System.out.print("\n (1) Anaheim Ducks         (2) Boston Bruins\n"
+	  				 + " (3) Buffalo Sabres        (4) Calgary Flames\n"
+	  				 + " (5) Carolina Hurricanes   (6) Chicago Blackhawks\n"
+	  				 + " (7) Colorado Avalanche    (8) Columbus Blue Jackets\n"
+	  				 + " (9) Dallas Stars         (10) Detroit Red Wings\n"
+	  				 + "(11) Edmonton Oilers      (12) Florida Panthers\n"
+	  				 + "(13) Los Angeles Kings    (14) Minnesota Wild\n"
+	  				 + "(15) Montreal Canadiens   (16) Nashville Predators\n"
+	  				 + "(17) New Jersey Devils    (18) New York Islanders\n"
+	  				 + "(19) New York Rangers     (20) Ottawa Senators\n"
+	  				 + "(21) Philadelphia Flyers  (21) Arizona Coyotes\n"
+	  				 + "(23) Pittsburgh Penguins  (24) St. Louis Blues\n"
+	  				 + "(25) San Jose Sharks      (26) Tampa Bay Lightning\n"
+	  				 + "(27) Toronto Maple Leafs  (28) Vancouver Canucks\n"
+	  				 + "(29) Washington Capitals  (30) Winnipeg Jets\n"
+	  				 + "             (31) Whole League\n\n");
+	  
+	  System.out.println("Enter your team to see how many cups they won: ");
+	  winnerName = input.nextInt();
+	  
+	  switch (winnerName){
+	    case 1:
+	    	cupTeam = "Anaheim Ducks";
+	    	System.out.println("The " + cupTeam + " won " + ducks + " time(s).");
+	        break;
+	    case 2:
+	        cupTeam = "Boston Bruins";
+	        System.out.println("The " + cupTeam + " won " + bruins + " time(s).");
+	        break;
+	        
+	      case 3:
+	        cupTeam = "Buffalo Sabres";
+	        System.out.println("The " + cupTeam + " won " + sabres + " time(s).");
+	        break;
+	        
+	      case 4:
+	        cupTeam = "Calgary Flames";
+	        System.out.println("The " + cupTeam + " won " + flames + " time(s).");
+	        break;
+	        
+	      case 5:
+	        cupTeam = "Carolina Hurricanes";
+	        System.out.println("The " + cupTeam + " won " + hurricanes + " time(s).");
+	        break;
+	        
+	      case 6:
+	        cupTeam = "Chicago Blackhawks";
+	        System.out.println("The " + cupTeam + " won " + blackhawks + " time(s).");
+	        break;
+	        
+	      case 7:
+	        cupTeam = "Colorado Avalanche";
+	        System.out.println("The " + cupTeam + " won " + avalanche + " time(s).");
+	        break;
+	        
+	      case 8:
+	        cupTeam = "Columbus Blue Jackets";
+	        System.out.println("The " + cupTeam + " won " + blueJackets + " time(s).");
+	        break;
+	        
+	      case 9:
+	        cupTeam = "Dallas Stars";
+	        System.out.println("The " + cupTeam + " won " + stars + " time(s).");
+	        break;
+	        
+	      case 10:
+	        cupTeam = "Detroit Red Wings";
+	        System.out.println("The " + cupTeam + " won " + redWings + " time(s).");
+	        break;
+	        
+	      case 11:
+	        cupTeam = "Edmonton Oilers";
+	        System.out.println("The " + cupTeam + " won " + oilers + " time(s).");
+	        break;
+	        
+	      case 12:
+	        cupTeam = "Florida Panthers";
+	        System.out.println("The " + cupTeam + " won " + panthers + " time(s).");
+	        break;
+	        
+	      case 13:
+	        cupTeam = "Los Angeles Kings";
+	        System.out.println("The " + cupTeam + " won " + kings + " time(s).");
+	        break;
+	        
+	      case 14:
+	        cupTeam = "Minnesota Wild";
+	        System.out.println("The " + cupTeam + " won " + wild + " time(s).");
+	        break;
+	        
+	      case 15:
+	        cupTeam = "Montreal Canadiens";
+	        System.out.println("The " + cupTeam + " won " + canadiens + " time(s).");
+	        break;
+	        
+	        case 16:
+	        cupTeam = "Nashville Predators";
+	        System.out.println("The " + cupTeam + " won " + predators + " time(s).");
+	        break;
+	        
+	        case 17:
+	        cupTeam = "New Jersey Devils";
+	        System.out.println("The " + cupTeam + " won " + devils + " time(s).");
+	        break;
+	        
+	        case 18:
+	        cupTeam = "New York Islanders";
+	        System.out.println("The " + cupTeam + " won " + islanders + " time(s).");
+	        break;
+	        
+	        case 19:
+	        cupTeam = "New York Rangers";
+	        System.out.println("The " + cupTeam + " won " + rangers + " time(s).");
+	        break;
+	        
+	        case 20:
+	        cupTeam = "Ottawa Senators";
+	        System.out.println("The " + cupTeam + " won " + senators + " time(s).");;
+	        break;
+	        
+	        case 21:
+	        cupTeam = "Philadelphia Flyers";
+	        System.out.println("The " + cupTeam + " won " + flyers + " time(s).");
+	        break;
+	        
+	        case 22:
+	        cupTeam = "Arizona Coyotes";
+	        System.out.println("The " + cupTeam + " won " + coyotes + " time(s).");
+	        break;
+	        
+	        case 23:
+	        cupTeam = "Pittsburgh Penguins";
+	        System.out.println("The " + cupTeam + " won " + penguins + " time(s).");
+	        break;
+	        
+	        case 24:
+	        cupTeam = "St. Louis Blues";
+	        System.out.println("The " + cupTeam + " won " + blues + " time(s).");
+	        break;
+	        
+	        case 25:
+	        cupTeam = "San Jose Sharks";
+	        System.out.println("The " + cupTeam + " won " + sharks + " time(s).");
+	        break;
+	        
+	        case 26:
+	        cupTeam = "Tampa Bay Lightning";
+	        System.out.println("The " + cupTeam + " won " + lightning + " time(s).");
+	        break;
+	        
+	        case 27:
+	        cupTeam = "Toronto Maple Leafs";
+	        System.out.println("The " + cupTeam + " won " + mapleLeafs + " time(s).");
+	        break;
+	        
+	        case 28:
+	        cupTeam = "Vancouver Canucks";
+	        System.out.println("The " + cupTeam + " won " + canucks + " time(s).");
+	        break;
+	        
+	        case 29:
+	        cupTeam = "Washington Capitals";
+	        System.out.println("The " + cupTeam + " won " + capitals + " time(s).");
+	        break;
+	        
+	        case 30:
+	        cupTeam = "Winnipeg Jets";
+	        System.out.println("The " + cupTeam + " won " + jets + " time(s).");
+	        break;
+	        
+	        case 31:
+	        System.out.println("The Anaheim Ducks won " + ducks + " time(s).");
+	        System.out.println("The Boston Bruins won " + bruins + " time(s).");
+	        System.out.println("The Buffalo Sabres won " + sabres + " time(s).");
+	        System.out.println("The Calgary Flames won " + flames + " time(s).");
+	        System.out.println("The Carolina Hurricanes won " + hurricanes + " time(s).");
+	        System.out.println("The Chicago Blackhawks won " + blackhawks + " time(s).");
+	        System.out.println("The Colorado Avalanche won " + avalanche + " time(s).");
+	        System.out.println("The Columbus Blue Jackets won " + blueJackets + " time(s).");
+	        System.out.println("The Dallas Stars won " + stars + " time(s).");
+	        System.out.println("The Detroit Red Wings won " + redWings + " time(s).");
+	        System.out.println("The Edmonton Oilers won " + oilers + " time(s).");
+	        System.out.println("The Florida Panthers won " + panthers + " time(s).");
+	        System.out.println("The Los Angeles Kings won " + kings + " time(s).");
+	        System.out.println("The Minnesota Wild won " + wild + " time(s).");
+	        System.out.println("The Montreal Canadiens won " + canadiens + " time(s).");
+	        System.out.println("The Nashville Predators won " + predators + " time(s).");
+	        System.out.println("The New Jersey Devils won " + devils + " time(s).");
+	        System.out.println("The New York Islanders won " + islanders + " time(s).");
+	        System.out.println("The New York Rangers won " + rangers + " time(s).");
+	        System.out.println("The Ottawa Senators won " + senators + " time(s).");
+	        System.out.println("The Philadelphia Flyers won " + flyers + " time(s).");
+	        System.out.println("The Arizona Coyotes won " + coyotes + " time(s).");
+	        System.out.println("The Pittsburgh Penguins won " + penguins + " time(s).");
+	        System.out.println("The St. Louis Blues won " + blues + " time(s).");
+	        System.out.println("The San Jose Sharks won " + sharks + " time(s).");
+	        System.out.println("The Tampa Bay Lightning won " + lightning + " time(s).");
+	        System.out.println("The Toronto Maple Leafs won " + mapleLeafs + " time(s).");
+	        System.out.println("The Vancouver Canucks won " + canucks + " time(s).");
+	        System.out.println("The Washington Capitals won " + capitals + " time(s).");
+	        System.out.println("The Winnipeg Jets won " + jets + " time(s).");
+	        break;
+	        
+	        default:
+	        	System.out.println("Please choose a number from 1-31.");
+	        	multiSim(args);
+	        
+	      }
+      }
+      else{
+    	  System.out.println("The number must be between 0 and 100!");
+    	  multiSim(args);
+      }
+      
+		System.out.println("\n(1) Simulate again\n"
+						 + "(2) Menu\n"
+						 + "(3) Exit\n");
+		int menu2 = input.nextInt();
+
+		switch(menu2){
+
+			case 1:
+				multiSim(args);
+				break;
+	
+			case 2:
+				main(args);
+				break;
+
+			case 3:
+				System.out.println("Thanks for playing!");
+				break;
+	
+			default:
+				System.out.println("Please select 1, 2, or 3!\n");
+				sim(args);
+		}
+	  
+  	}
+ 
+ }
